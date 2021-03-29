@@ -19,6 +19,108 @@ body {
     grid-template-rows: 1fr auto;
 }
 
+/*POPUP*/
+body {
+	margin:0;
+}
+
+.popup {
+	position: absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	display:none;
+}
+
+.popup_bg {
+	background:rgba(0,0,0,0.4);
+	position:fixed;
+	z-index:1;
+	height:100%;
+	width:100%;
+}
+	
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}	
+.form {
+	position: relative;
+	margin:0 auto;
+    margin-top: 280px;
+    padding-top: 35px;
+	z-index:2;
+	width:470px;
+    height: 578px;
+	background:#FFFFFF;
+	border:1px solid #000000;
+}
+
+form h2{
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #535353;
+}
+
+form p{
+    margin: 20px 0 5px 0;
+}
+
+form input, textarea{
+    outline: none;
+    transition: 2s;
+}
+
+form input:focus, textarea:focus{
+    border: 1px solid rgb(19, 133, 123);
+}
+
+.form input,
+textarea,
+input[type=text],
+input[type=tel],
+input[type=email]{
+    width: 341px;
+    height: 42px;
+    background-color: #FFFFFF;
+    border: 1px solid #c3c3c3;
+    padding:0  10px;
+}
+
+
+textarea{
+    height: 142px;
+}
+
+input[type=submit]{
+    width: 128px;
+    height: 42px;
+    background-color: #777777;
+    color: #FFFFFF;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 17.8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+
+form input:-moz-ui-invalid {
+    box-shadow: none;
+    /* background-color: rgb(175, 235, 167); */
+    border: 1px solid #ff0000;
+    box-shadow: inset 0.5px 0.5px 15px 1px rgb(255, 211, 211);
+}
+
+form input:-moz-ui-invalid::placeholder{
+    color: red;
+    font-style: italic;
+}
+
 /*HEADER*/
 .header,
 .header_company_logo,
@@ -50,6 +152,17 @@ body {
     margin-left: auto;
     font-size: 40px;
     font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.header_contacts .feedback{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0.025em;
+    color: #767676;
+    align-self: flex-end;
+    border-bottom: 2px dashed black;
 }
 
 .header_company_name {
@@ -105,16 +218,19 @@ body {
 }
 
 /*SLIDER*/
-.slider {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.slider{
+    /* display: flex; */
+    width: 980px;
+    margin-top: -30px;
+    position: relative;
+    z-index: -1;
+    margin-left: 500px;
 }
 
-.slider img {
-    z-index: -1;
+.slider-block{
+    display: flex;
+    justify-content: center;
+    width: 980px;
 }
 
 /*BREADCRUMBS*/
@@ -160,7 +276,8 @@ body {
 
 /*SIDEBAR*/
 .content_sidebar {
-    font-size: 18px;
+    width: 180px;
+    font-size: 1 8px;
     line-height: 30px;
     height: 500px;
     background-color: #ffffff;
@@ -180,6 +297,43 @@ body {
     font-size: 30px;
     font-weight: 700;
     color: #444444;
+}
+
+/*SIDEBAR BURGER MENU*/
+.nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_item{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.submenu{
+    font-size: 14px;
+}
+
+.menu_item .submenu{
+    height: 40px;
+    width: 180px;
+    position: absolute;
+    display: none;
+    margin-left: 8px;
+}
+
+.middle_dot{
+    font-size: 30px;
+}
+
+.menu_item:hover .submenu{
+    display: block;
+}
+
+.menu_item:hover{
+    margin-bottom: 120px;
 }
 
 /*ITEMS FOR SALE*/
