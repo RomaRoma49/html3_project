@@ -14,7 +14,7 @@ body {
     width: 100%;
     background-color: #f8f8f8;
     /* font-family: 'Open Sans Condensed', sans-serif; */
-    height: 100vh;
+    /* min-height: 100vh; */
     display: grid;
     grid-template-rows: 1fr auto;
 }
@@ -86,6 +86,11 @@ input[type=text]{
     text-transform: capitalize;
 }
 
+input::placeholder{
+    text-transform: none;
+    color: #ffffff;
+}
+
 .form input,
 textarea,
 input[type=text],
@@ -126,6 +131,7 @@ form input:-moz-ui-invalid {
 form input:-moz-ui-invalid::placeholder{
     color: red;
     font-style: italic;
+
 }
 
 .popup_close_button{
@@ -189,6 +195,11 @@ form input:-moz-ui-invalid::placeholder{
     flex-direction: column;
     justify-content: space-between;
 }
+
+/* .header_logo_name a{
+    width: 73px;
+    height: 100px;
+} */
 
 .header_company_name h2 {
     font-weight: bold;
@@ -296,6 +307,7 @@ form input:-moz-ui-invalid::placeholder{
 
 /*CONTENT*/
 .content {
+    /* height: 100vh; */
     width: 100%;
     background-color: #ffffff;
     display: flex;
@@ -349,11 +361,15 @@ form input:-moz-ui-invalid::placeholder{
 }
 
 .nested_list li:hover a,
-.appliances_list:hover > a,
-.hover_on_link:hover{
+.hover_on_link:hover {
     text-decoration: underline;
     font-weight: 700;
 }
+
+.appliances_list:hover > a{
+    text-decoration: underline;
+}
+
 
 .nested_list{
     display: none;
@@ -449,6 +465,10 @@ aside a{
     font-size: 18px;
 }
 
+.content_main{
+    margin-left: auto;
+}
+
 /*HORIZONTAL LINE*/
 .br {
     width: 100%;
@@ -492,6 +512,7 @@ aside a{
     line-height: 22px;
     font-weight: 400;
     letter-spacing: 0.025em;
+    margin-top: auto;
 }
 
 .footer980px {
@@ -516,4 +537,11 @@ aside a{
 
 .footer_link a {
     color: #eaeaea;
+}
+
+.content_block{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

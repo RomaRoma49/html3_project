@@ -20,7 +20,7 @@
             <div class="header980px area_980px">
                 <div class="header_company_logo">
                     <div class="header_company_name">
-                        <img src="media/header_company_name" width="273px" height="100px" alt="logo">
+                        <a class="header_company" href="#"><img src="media/header_company_name" width="273px" height="100px" alt="logo"></a>
                     </div>
                 </div>
                 <div class="header_contacts">
@@ -41,21 +41,26 @@
                         <img src="media/frorm_x.png" alt="">
                     </div>
                     
-                    <form class="form_body"action="" method="POST">
+                    <form class="form_body"action="#" method="POST">
                         <h2>Обратная связь</h2>
+                        
                         <p class="form_helping_text">Ваше имя*</p>
-                        <input type="text" name="name" required>
+                        <input id="name_input" type="text" name="name" required
+                        placeholder="Поле обязательно для заполнения">
                         
                         <p class="form_helping_text">Телефон*</p>
                         <input type="tel" name="tel." required
-                        pattern="[0-9]{12}" maxlength="12">
+                        pattern="[0-9]{12}" maxlength="12"
+                        placeholder="Поле обязательно для заполнения">
+
                         <p class="form_helping_text">Email*</p>
-                        <input type="email" name="email" required placeholder="Поле обязательно для заполнения">
+                        <input type="email" name="email" required 
+                        placeholder="Поле обязательно для заполнения">
         
                         <p class="form_helping_text">Сообщение</p>
                         <textarea style="resize: none;" name="message"></textarea>
         
-                        <input type="submit" value="отправить" class="send_button">
+                        <input type="submit" value="отправить" class="send_button submit" placeholder="Поле обязательно для заполнения">
                     </form>
                 </div>
             </div>
@@ -69,6 +74,7 @@
                     <li><a href="">Доставка и оплата</a></li><span class="seperator">|</span>
                     <li><a href="">Прайс-лист</a></li><span class="seperator">|</span>
                     <li><a href="">Контакты</a></li>
+                    
                 </ul>
             </div>
         </div>
@@ -251,7 +257,7 @@
                     </div>
 
                     <div class="content_bottom_articles">
-                        <div class="content_bottom_right_aricle content_bottom_left_and_right_articles">
+                        <div class="content_bottom_right_aricle content_bottom_left_and_right_articles" align="justify">
                             Компания «Пиксель Плюс» существует более 6 лет, за
                             это время мы принимали участие в разработке более чем
                             700 сайтов, поэтому можем уверенно называть себя
@@ -262,7 +268,7 @@
                             угасания души.
                         </div>
 
-                        <div class="content_bottom_left_article content_bottom_left_and_right_articles">
+                        <div class="content_bottom_left_article content_bottom_left_and_right_articles" align="justify">
                             Одним из основных направлений работ нашей компании
                             является поисковое продвижение сайтов, на данной
                             момент мы работаем с более чем 150 постоянными
@@ -280,8 +286,6 @@
 
             </div>
         </div>
-
-    </>
 
     <div class="footer">
         <div class="footer980px">
@@ -312,7 +316,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
