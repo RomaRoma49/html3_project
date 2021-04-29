@@ -7,23 +7,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=PT+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <div class="content_block">
         <div class="header">
             <div class="header980px area_980px">
                 <div class="header_company_logo">
                     <div class="header_company_name">
-                        <img src="/media/header_company_name" width="273px" height="100px" alt="logo">
+                        <a class="header_company" href="#"><img src="media/header_company_name" width="273px" height="100px" alt="logo"></a>
                     </div>
                 </div>
                 <div class="header_contacts">
                     <a href="tel:+74997777777">+7(499) 777-77-77</a>
                     <a href="tel:+74997777777">+7(499) 777-77-77</a>
+                    <a href="#" class="feedback" onclick="showPopup();"">Обратная связь</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup">
+            <div class="popup_bg"></div>
+            <div class="popup">
+                <div class="popup_bg"></div>
+                <div class="form">
+
+                    <div onclick="hidePopup()" onclick="clearForm()" class="popup_close_button reset">
+                        <img src="media/frorm_x.png" alt="">
+                    </div>
+                    
+                    <form class="form_body"action="#" method="POST">
+                        <h2>Обратная связь</h2>
+                        
+                        <p class="form_helping_text">Ваше имя*</p>
+                        <input id="name_input" type="text" name="name" required
+                        placeholder="Поле обязательно для заполнения">
+                        
+                        <p class="form_helping_text">Телефон*</p>
+                        <input type="tel" name="tel." required
+                        pattern="[0-9]{12}" maxlength="12"
+                        placeholder="Поле обязательно для заполнения">
+
+                        <p class="form_helping_text">Email*</p>
+                        <input type="email" name="email" required 
+                        placeholder="Поле обязательно для заполнения">
+        
+                        <p class="form_helping_text">Сообщение</p>
+                        <textarea style="resize: none;" name="message"></textarea>
+        
+                        <input type="submit" value="отправить" class="send_button submit" placeholder="Поле обязательно для заполнения">
+                    </form>
                 </div>
             </div>
         </div>
@@ -36,51 +74,62 @@
                     <li><a href="">Доставка и оплата</a></li><span class="seperator">|</span>
                     <li><a href="">Прайс-лист</a></li><span class="seperator">|</span>
                     <li><a href="">Контакты</a></li>
+                    
                 </ul>
             </div>
         </div>
 
-        <div class="slider">
-            <img src="/media/slide_1.png" alt="slider img">
-        </div>
+        <div class="slider_wrapper">
+            <div class="slider">
+                <div class="slider_item">
+                    <img src="media/slide_1.png" alt="1">
+                </div>
+                <div class="slider_item">
+                    <img src="media/slide_2.png" alt="2">
+                </div>
+            </div>
 
+            <div class="slider_buttons">
+                <button><img class="prev" src="media/slider_left_arrow.png" alt=""></button>
+                <button><img class="next" src="media/slider_right_arrow.png" alt=""></button>
+
+            </div>
+        </div>
+        
         <div class="breadcumbs">
             <div class="breadcrumbs980px">
-                    <p>
-                        <a href="#">Главная</a> <span class="breadcrumbs_seperator">/</span>
-                        <a href="#"> Каталог</a> <span class="breadcrumbs_seperator">/</span>                        
-                        Бытовая техника
-                    </p>
+                <p>
+                    <a href="#">Главная</a> <span class="breadcrumbs_seperator">/</span>
+                    <a href="#"> Каталог</a> <span class="breadcrumbs_seperator">/</span>
+                    Бытовая техника
+                </p>
             </div>
         </div>
 
         <div class="content">
+            
             <div class="content_980px">
+                
                 <aside class="content_sidebar">
-                    <ul>
-                        <li>
-                            <p>Автомобили</p>
+                    <ul id="nav">
+                        <li><a href="#" class="hover_on_link" >Автомобили</a></li>
+                        <li class="appliances_list"><a href="#">Бытовая техника</a>
+                            <ul class="nested_list">
+                                <li><a href="3">Микроволновки</a></li>
+                                <li><a href="3">Холодильники</a></li>
+                                <li><a href="3">Посудомоечные машины</a></li>
+                                <li><a href="3">Чайники</a></li>
+                            </ul>
                         </li>
-                        <li>
-                            <p>Бытовая техни</p>
-                        </li>
-                        <li>
-                            <p>Мобильная техника</p>
-                        </li>
-                        <li>
-                            <p>Компьютеоры</p>
-                        </li>
-                        <li>
-                            <p>Одежда</p>
-                        </li>
-                        <li>
-                            <p>Недвижи мость</p>
-                        </li>
+                        <li><a href="#" class="hover_on_link" >Мобильная техника</a></li>
+                        <li><a href="#" class="hover_on_link" >Компьютеоры</a></li>
+                        <li><a href="#" class="hover_on_link" >Одежда</a></li>
+                        <li><a href="#" class="hover_on_link" >Недвижимость</a></li>
                     </ul>
-                    
+
                     <div class="sidebar_bottom_part">
-                        <img src="/media/excel_logo.png" width="97px"
-                        height="107px" alt="excel_logo">
+                        <img src="media/excel_logo.png" width="97px" height="107px"
+                         alt="excel_logo">
                     </div>
 
                     <p class="sidebar_price_list">
@@ -90,36 +139,153 @@
 
                 <div class="content_main">
                     <div class="content_items_4_sale">
-                        
+
                         <div class="item_4_sale">
-                            
-                            <img src="/media/no_photo.png" alt="no_photo"
+                            <img src="media/no_photo.png" alt="no_photo" 
                             width="210px" height="210px" class="item_4_sale_margin">
-                            
-                            <p class="item_description, item_4_sale_margin">
+
+                            <p class="item_description item_4_sale_margin">
                                 Самый клевый чайник, который надо купить!
                             </p>
-                            
+
                             <div class="item_4sale_bottom_part">
                                 <p class="item_price item_4_sale_margin">
                                     1 900 p.
                                 </p>
 
                                 <a href="#" class="">
-                                    <img src="/media/add_to_basket.png" alt="basket"
-                                    width="30px" height="22px" class="basket item_4_sale_margin">    
+                                    <img src="media/add_to_basket.png" alt="basket" 
+                                    width="28px" height="21px" class="basket item_4_sale_margin">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="item_4_sale">
+                            <img src="media/no_photo.png" alt="no_photo" 
+                            width="210px" height="210px" class="item_4_sale_margin">
+
+                            <p class="item_description item_4_sale_margin">
+                                Самый клевый чайник, который надо купить!
+                            </p>
+
+                            <div class="item_4sale_bottom_part">
+                                <p class="item_price item_4_sale_margin">
+                                    1 900 p.
+                                </p>
+
+                                <a href="#" class="">
+                                    <img src="media/add_to_basket.png" alt="basket" 
+                                    width="28px" height="21px" class="basket item_4_sale_margin">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="item_4_sale">
+                            <img src="media/no_photo.png" alt="no_photo" 
+                            width="210px" height="210px" class="item_4_sale_margin">
+
+                            <p class="item_description item_4_sale_margin">
+                                Самый клевый чайник, который надо купить!
+                            </p>
+
+                            <div class="item_4sale_bottom_part">
+                                <p class="item_price item_4_sale_margin">
+                                    1 900 p.
+                                </p>
+
+                                <a href="#" class="">
+                                    <img src="media/add_to_basket.png" alt="basket" 
+                                    width="28px" height="21px" class="basket item_4_sale_margin">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="item_4_sale">
+                            <img src="media/no_photo.png" alt="no_photo" width="210px"
+                             height="210px" class="item_4_sale_margin">
+
+                            <p class="item_description item_4_sale_margin">
+                                Самый клевый чайник, который надо купить!
+                            </p>
+
+                            <div class="item_4sale_bottom_part">
+                                <p class="item_price item_4_sale_margin">
+                                    1 900 p.
+                                </p>
+
+                                <a href="#" class="">
+                                    <img src="media/add_to_basket.png" alt="basket"
+                                     width="28px" height="21px" class="basket item_4_sale_margin">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="item_4_sale">
+                            <img src="media/no_photo.png" alt="no_photo" width="210px"
+                             height="210px" class="item_4_sale_margin">
+
+                            <p class="item_description item_4_sale_margin">
+                                Самый клевый чайник, который надо купить!
+                            </p>
+
+                            <div class="item_4sale_bottom_part">
+                                <p class="item_price item_4_sale_margin">
+                                    1 900 p.
+                                </p>
+
+                                <a href="#" class="">
+                                    <img src="media/add_to_basket.png" alt="basket"
+                                    width="28px" height="21px" class="basket item_4_sale_margin">
                                 </a>
                             </div>
                         </div>
 
                     </div>
+
+                    <div class="content_pager">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#" class="active_page">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                    </div>
+
+                    <div class="br">
+
+                    </div>
+
+                    <div class="content_bottom_articles">
+                        <div class="content_bottom_right_aricle content_bottom_left_and_right_articles" align="justify">
+                            Компания «Пиксель Плюс» существует более 6 лет, за
+                            это время мы принимали участие в разработке более чем
+                            700 сайтов, поэтому можем уверенно называть себя
+                            профессионалами. На данный момент наш коллектив состоит
+                            из более чем 30 сотрудников работающих в двух офисах
+                            в Москве и Зеленограде.характерные для этого жанра
+                            мотивы: неразделённой любви, ухода молодости,
+                            угасания души.
+                        </div>
+
+                        <div class="content_bottom_left_article content_bottom_left_and_right_articles" align="justify">
+                            Одним из основных направлений работ нашей компании
+                            является поисковое продвижение сайтов, на данной
+                            момент мы работаем с более чем 150 постоянными
+                            клиентами по более чем 11 000 поисковым запросам.
+                            При этом в работе основной акцент мы делаем на качестве
+                            работ, а так же применяем собственные уникальные
+                            разработки в области SEO продвижения. На данный момент
+                            отдел SEO состоит из 9 человек под руководством
+                            ведущего специалиста, преимущественно работающих в
+                            нашем московском офисе.
+                        </div>
+
+                    </div>
                 </div>
-            
+
             </div>
         </div>
-
-    </div>
-    </div>
 
     <div class="footer">
         <div class="footer980px">
@@ -138,27 +304,19 @@
                 </ul>
             </div>
             <div class="footer_right_element footer_link">
-                <img src="/media/footer_logo.png" title="footer logo"
-                width="36px" height="38px" alt="footer logo">
+                <img src="media/footer_logo.png" title="footer logo" width="36px"
+                 height="38px" alt="footer logo">
                 <p>
                     <a href="#">Разработка сайта - <br></a>
                     компания «Пиксель Плюс»
                 </p>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
